@@ -1,0 +1,24 @@
+{% assign chapter_modulo = page.chapter_number | modulo: 3 %}
+<nav class="chapter-nav" aria-label="Điều hướng chương">
+  <div>
+    {% if page.prev_url %}
+      <a class="nav-button secondary" href="{{ page.prev_url | relative_url }}">← Chương trước</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+  </div>
+
+  <a class="nav-button toc" href="{{ page.intro_url | relative_url }}">Mục lục</a>
+
+  <div>
+    {% if page.next_url %}
+      <a
+        class="nav-button primary js-next-chapter"
+        href="{{ page.next_url | relative_url }}"
+        data-show-support="{% if chapter_modulo == 0 %}true{% else %}false{% endif %}"
+      >Chương sau →</a>
+    {% else %}
+      <a class="nav-button primary" href="{{ page.intro_url | relative_url }}">Về trang truyện</a>
+    {% endif %}
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+<div id="supportModal" class="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
+    <button id="closeSupportModal" class="modal-close" type="button" aria-label="Đóng">×</button>
+    <p class="eyebrow">Một lời mời nhỏ</p>
+    <h2 id="supportTitle">Ủng hộ góc truyện này 🌿</h2>
+    <p>
+      Nếu thấy truyện thú vị, bạn có thể ghé Shopee qua liên kết của tác giả.
+      Bạn vẫn có thể tiếp tục đọc ngay, không cần chờ đợi.
+    </p>
+    <p class="affiliate-note">{{ site.affiliate_note }}</p>
+
+    <a
+      class="modal-affiliate"
+      href="{{ site.affiliate_url }}"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+    >{{ site.affiliate_label }}</a>
+
+    <button id="continueReading" class="modal-continue" type="button">Tiếp tục đọc chương sau</button>
+  </div>
+</div>
